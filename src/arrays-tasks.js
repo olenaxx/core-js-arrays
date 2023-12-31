@@ -20,6 +20,9 @@
  *    getIntervalArray(0, 100) => [ 0, 1, 2, ..., 100 ]
  *    getIntervalArray(3, 3) => [ 3 ]
  */
+// function getIntervalArray(start, end) {
+//   return Array.from();
+// }
 function getIntervalArray(/* start, end */) {
   throw new Error('Not implemented');
 }
@@ -37,6 +40,9 @@ function getIntervalArray(/* start, end */) {
  *    sumArrays([10, 20, 30], [5, 10, 15]) => [15, 30, 45]
  *    sumArrays([-1, 0, 1], [1, 2, 3, 4]) => [0, 2, 4, 4]
  */
+// function sumArrays(arr1, arr2) {
+
+// }
 function sumArrays(/* arr1, arr2 */) {
   throw new Error('Not implemented');
 }
@@ -101,9 +107,12 @@ function removeFalsyValues(/* arr */) {
  *    getStringsLength([ '', 'a', 'bc', 'def', 'ghij' ]) => [ 0, 1, 2, 3, 4 ]
  *    getStringsLength([ 'angular', 'react', 'ember' ]) => [ 7, 5, 5 ]
  */
-function getStringsLength(/* arr */) {
-  throw new Error('Not implemented');
+function getStringsLength(arr) {
+  return arr.map((el) => el.length);
 }
+// function getStringsLength(/* arr */) {
+//   throw new Error('Not implemented');
+// }
 
 /**
  * Returns the average of all items in the specified array of numbers.
@@ -133,8 +142,10 @@ function getAverage(/* arr */) {
  *    isSameLength(['orange', 'banana', 'cherry']) => true
  *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
-function isSameLength(/* arr */) {
-  throw new Error('Not implemented');
+function isSameLength(arr) {
+  const lengths = arr.map((el) => el.length);
+  // Checks if all elements in an array of lengths are the same
+  return lengths.every((el) => el === lengths[0]);
 }
 
 /**
@@ -178,9 +189,12 @@ function insertItem(/* arr, item, index */) {
  *    getHead([ 'a', 'b', 'c', 'd'], 3) => [ 'a', 'b', 'c' ]
  *    getHead([ 'a', 'b', 'c', 'd'], 0) => []
  */
-function getHead(/* arr, n */) {
-  throw new Error('Not implemented');
+function getHead(arr, n) {
+  return arr.slice(0, n);
 }
+// function getHead(/* arr, n */) {
+//   throw new Error('Not implemented');
+// }
 
 /**
  * Returns the n last items of the specified array.
